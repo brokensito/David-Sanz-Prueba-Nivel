@@ -55,7 +55,6 @@ def catalogar(lista, ruedas=None):
 
     if ruedas!=None: 
         cont = 0
-
         for i in lista:
             if i.ruedas == ruedas:
                 cont +=1
@@ -70,11 +69,7 @@ def catalogar(lista, ruedas=None):
             print("\nEl vehiculo {} tiene los siguientes atributos: \n -  {}".format(type(i).__name__, i))
 
     
-
-
 catalogar(vehiculos)
-
 catalogar(vehiculos, 2)
-
 catalogar(vehiculos, 4)
 
