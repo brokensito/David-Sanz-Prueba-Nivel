@@ -42,4 +42,7 @@ class Motocicleta(Bicicleta):
     def __str__(self):
         return super().__str__() + ", {} km/h , {} cc".format(self.velocidad,self.cilindrada)
 
+vehiculos = [Motocicleta("morada", 2, "urbana", 110, 90), Camioneta("blanca", 4, 90, 150, 500), 
+Coche("negro", 4, 120, 1500), Bicicleta("morada", 2, "deportiva")]
+
 
