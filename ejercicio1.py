@@ -74,7 +74,7 @@ def catalogar(lista, ruedas=None):
 
 catalogar(vehiculos)
 
-# catalogar(vehiculos, 2)
+catalogar(vehiculos, 2)
 
-# catalogar(vehiculos, 4)
+catalogar(vehiculos, 4)
 
