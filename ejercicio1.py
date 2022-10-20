@@ -42,7 +42,7 @@ class Motocicleta(Bicicleta):
     def __str__(self):
         return super().__str__() + ", {} km/h , {} cc".format(self.velocidad,self.cilindrada)
 
-vehiculos = [Motocicleta("morado", 2, "urbana", 110, 90), Camioneta("blanco", 4, 90, 150, 500), 
+vehiculos = [Motocicleta("morado", 2, "urbana", 110, 90), Camioneta("blanco", 4, 90, 1500, 500), 
 Coche("negro", 4, 120, 1500), Bicicleta("dorado", 2, "deportiva")]
 
 def catalogar(lista):
@@ -51,7 +51,22 @@ def catalogar(lista):
         print("El vehiculo {} tiene los siguientes atributos: {}".format(type(i).__name__, i))
 
 
+def catalogar(lista, ruedas=None):
+
+    if ruedas!=None: 
+        cont = 0
+
+        for i in lista:
+            if i.ruedas == ruedas:
+                cont +=1
+
+        print("Se han encontrado {} vehiculos con {} ruedas:".format(cont, ruedas))
+
+    for i in lista:
+        if i.ruedas == ruedas:
+            print(type(i).__name__,":", i)
+
+    
 
 
-
-catalogar(vehiculos)
+catalogar(vehiculos, 2)
