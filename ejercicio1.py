@@ -1,4 +1,4 @@
-from socket import TIPC_CONN_TIMEOUT
+
 
 
 class Vehiculo():
@@ -31,7 +31,7 @@ class Bicicleta(Vehiculo):
         self.tipo = tipo
 
     def __str__(self):
-        return super().__str__() + ", {} es su tipo".format(self.tipo)
+        return super().__str__() + ", {} ".format(self.tipo)
 
 class Motocicleta(Bicicleta):
     def __init__(self, color, ruedas, tipo, velocidad, cilindrada):
@@ -42,7 +42,16 @@ class Motocicleta(Bicicleta):
     def __str__(self):
         return super().__str__() + ", {} km/h , {} cc".format(self.velocidad,self.cilindrada)
 
-vehiculos = [Motocicleta("morada", 2, "urbana", 110, 90), Camioneta("blanca", 4, 90, 150, 500), 
-Coche("negro", 4, 120, 1500), Bicicleta("morada", 2, "deportiva")]
+vehiculos = [Motocicleta("morado", 2, "urbana", 110, 90), Camioneta("blanco", 4, 90, 150, 500), 
+Coche("negro", 4, 120, 1500), Bicicleta("dorado", 2, "deportiva")]
+
+def catalogar(lista):
+
+    for i in lista:
+        print("El vehiculo {} tiene los siguientes atributos: {}".format(type(i).__name__, i))
 
 
+
+
+
+catalogar(vehiculos)
